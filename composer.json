@@ -1,0 +1,43 @@
+{
+    "name": "wshafer/psr7-elfinder",
+    "type": "library",
+    "description": "PSR7 implimentaion of ElFinder",
+    "homepage": "https://github.com/wshafer/psr7-elfinder",
+    "authors": [
+        {
+            "name": "Westin Shafer",
+            "email": "shafer_w2002@yahoo.com",
+            "homepage": "https://github.com/wshafer"
+        }
+    ],
+    "license" : "BSD-2-Clause",
+    "require": {
+        "php": "^7.0",
+        "psr/container": "^1.0.0",
+        "studio-42/elfinder": "^2.1",
+        "wshafer/psr11-flysystem": "^2.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0.8",
+        "squizlabs/php_codesniffer": "^2.8.1",
+        "phpmd/phpmd" : "@stable",
+        "satooshi/php-coveralls": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WShafer\\PSR7ElFinder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WShafer\\PSR7ElFinder\\Test\\": "tests/"
+        }
+    },
+
+    "extra": {
+        "zf": {
+            "config-provider": "WShafer\\PSR7ElFinder\\ConfigProvider",
+            "module": "WShafer\\PSR7ElFinder"
+        }
+    }
+}
